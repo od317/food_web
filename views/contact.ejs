@@ -1,0 +1,27 @@
+<div class="contact d-flex justify-content-between">
+<form action="/contact" method="post">
+<div class="container">
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label" >Name</label>
+    <input required type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name"
+    name="name">
+  </div>    
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input required type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Massage</label>
+    <textarea required class="form-control" id="exampleFormControlTextarea1" rows="3" name="massage"></textarea>
+  </div>
+ <button type="submit" class="btn-grad con">send</button> 
+</div>  
+</form>
+<div class="context">
+  <h1 cass="contxt_h">Contact Us</h1>
+  <div classs="inn_text">we appricieate your opinion and your support <br>
+  you can contact us on <br>
+  returans@gmail.com <br><h3><%= locals.done %> </h3> </div>
+</div>
+<h3></h3> 
+</div>
