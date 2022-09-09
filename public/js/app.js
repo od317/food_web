@@ -2,8 +2,9 @@ const app_id="88246266";
 const app_key="5c9709930f9269a830346c8b35d0e3ca";
 const s=document.querySelector("#search_form");
 let searchq="";
-const health=`https://api.edamam.com/search?q=onion&app_id=${app_id}&app_key=${app_key}&health=alcohol-free&to=50`;
-fetchapi(`https://api.edamam.com/search?q=onion&app_id=${app_id}&app_key=${app_key}&to=40`);
+const health=`https://api.edamam.com/search?q=chicken&app_id=${app_id}&app_key=${app_key}&to=50&calories=591-722&health=alcohol-free
+`;
+fetchapi(`https://api.edamam.com/search?q=onion&app_id=${app_id}&app_key=${app_key}&to=50`);
 if(s!=null){
 s.addEventListener('submit',(e)=>{
     e.preventDefault();
@@ -34,7 +35,6 @@ async function innerh(res){
       <img src="${e.recipe.image}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${e.recipe.label}</h5>
-        <p class="card-text"></p>
         <a href="/recipe/${e.recipe.label}" class="btn btn-primary" id="b">View recipe</a>
       </div>
       </div>`
@@ -46,6 +46,10 @@ async function innerh(res){
   }
 }
 
-
-
-
+const h_b=document.querySelectorAll("#h_b");
+h_b.forEach(e=>{
+  e.addEventListener('click',()=>{
+  console.log(e.innerText);
+  fetchapi(`https://api.edamam.com/search?q=chicken&app_id=${app_id}&app_key=${app_key}&to=50&health=alcohol-free
+  `)
+})});

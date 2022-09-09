@@ -12,12 +12,32 @@ async function fetch_api2(view_url){
       let ht2="";
       hits.forEach(e2 => {
       if(e2.recipe.label===id){
+        let health='';
+        let ingredientLines='';
+        e2.recipe.healthLabels.forEach(h=>{
+          health+=String(h)+',';
+        })
+        e2.recipe.ingredientLines.forEach(h=>{
+          ingredientLines+=String(h)+',';
+        })
+        health=health.substring(0,health.length-1)+".";
+        ingredientLines=ingredientLines.substring(0,ingredientLines.length-1)+".";
         ht2=`
       <h1 class='view_title'>${e2.recipe.label}</h1>
-      <img src="${e2.recipe.image}" class="img-fluid">
+      <div class="view-flex d-flex align-content-start flex-wrap">
+      <img src="${e2.recipe.image}" class="img-thumbnail img-fluid"><br>
+      <div class="info d-flex flex-row ">Chef: ${e2.recipe.source}<br>
+ Category: ${e2.recipe.ingredients[0].foodCategory}<br><br>
+       healthLabels: ${health}<br><br>
+       ingredientLines: ${ingredientLines}
+       <br><br>
+
+       <div>
+       </div>
+       <div class=""></div>
       `;
       return;
       }
       });
-      document.querySelector('.container').innerHTML=ht2;
+      document.querySelector('.view_body').innerHTML=ht2;
 }

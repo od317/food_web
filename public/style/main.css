@@ -3,6 +3,7 @@
 @import 'recipe.css';
 @import 'about.css';
 @import 'contact.css';
+@import 'view.css';
 :root{
     --color:rgb(42, 199, 147);
     --bg:rgb(24, 24, 24);
