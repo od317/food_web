@@ -12,15 +12,18 @@
     font-family:"Nunito";
 }
 body{
-    background: #11998e;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    overflow-x: hidden;
+ background-color: rgb(255, 255, 255);
+ overflow-x:hidden ;
+}
+.nav_bar_e{
+    width: 30vw;
+    font-size: 1.2rem;
 }
 .navbar{
-    border-bottom: solid 1px var(--color);
+    position:absolute;
+    width: 100%;
     padding: 1rem;
-    background-color: var(--bg);
+    background:transparent;
 }
 #nav_list{
     align-items: center;
@@ -32,10 +35,10 @@ body{
 #nav_list a{
       text-decoration: none;
       margin-left: 8%;
-      color: var(--color);
+      color: rgb(255, 255, 255);
 }
 ion-icon{
-    color:var(--color);
+    color:rgb(255, 255, 255);
 }
 .footer{
     width: 100%;
@@ -71,3 +74,14 @@ ion-icon{
 .space{
     height: 10vh;
 }
+
+
+@media only screen and (max-width:450px) {
+    .nav_bar_e{
+        width: 25vw;
+        font-size: .7rem;
+    }
+    .logof ion-icon{
+        font-size:.7rem;
+      }
+  }

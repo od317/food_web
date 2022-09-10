@@ -6,6 +6,8 @@ const expresslay=require("express-ejs-layouts");
 const aboutrouter=require('./routes/about');
 const reciperouter=require('./routes/recipe');
 const contactrouter=require('./routes/contacts');
+const homerouter=require('./routes/home');
+
 
 app.use(bodyp.urlencoded({extended:true}));
 app.use(method('_method'));
@@ -16,8 +18,8 @@ app.use(expresslay);
 app.use('/recipe',reciperouter);
 app.use('/contact',contactrouter);
 app.use('/about',aboutrouter);
-
-app.get('^/$|home',(req,res)=>{
+app.use('/home',homerouter);
+app.get('^/$',(req,res)=>{
     res.render("index");
 })
 
