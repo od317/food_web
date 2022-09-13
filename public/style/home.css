@@ -9,6 +9,7 @@
     display:flex ;
     align-items: center;
     justify-content: center;
+    
  }
 
 .home_search_head_text{
@@ -16,11 +17,15 @@
     background-color: transparent;
     border: none;
     color:white;
+    font-size: 1.3rem;
 }
 .home_search_text-title{
     text-decoration: none;
     color:white;
-    font-size: 2rem;
+    font-size: 1rem;
+}
+.card-text{
+    font-size: 1.2rem;
 }
 .home_search_text-title:hover{
     text-decoration: none;
@@ -61,18 +66,29 @@
     width: 80%;
     margin: auto;
     text-align: center;
+    font-size: 1.4rem;
  }
 
  .home-sec-container{
     width:100%;
     padding: 1rem;
     margin-bottom: 1rem;
+    
  }
 
 .home-card{
     width: 30%;
     max-width: 500px;
+    border-radius: 10px;
+    min-width: 150px;
+    margin-top: 2.5vh;
 }
+
+.home-card img{
+   border-top-right-radius: 10px;
+}
+
+
 .home-card-text-d{
     padding: 3%;
     background-color: rgb(236, 236, 236);
