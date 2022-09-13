@@ -13,7 +13,7 @@
  }
 
 .home_search_head_text{
-    width: 50%;
+    width: 80%;
     background-color: transparent;
     border: none;
     color:white;
@@ -82,6 +82,7 @@
     border-radius: 10px;
     min-width: 150px;
     margin-top: 2.5vh;
+
 }
 
 .home-card img{
@@ -93,8 +94,8 @@
     padding: 3%;
     background-color: rgb(236, 236, 236);
 }
-.home-card p{
-    font-size: 80%;
+.home-card-p{
+    font-size: 10px;
 }
 @media only screen and (max-width:450px) {
     .home_search_text-title{
@@ -111,6 +112,9 @@
     }
     .home-card h6{
         font-size: 1rem;
+    }
+    .home_search_head_text{
+        width: 100%;
     }
   }
 
