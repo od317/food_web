@@ -9,16 +9,19 @@ body{
     width: 100vw;
     height: 85vh;
     max-width: 100%;
-    max-height: 100%;    
+    max-height: 100%;
+    min-height:300px ;    
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 5rem;
 }
 .home_flex_n{
     background:transparent;
     color: white;
     font-size: 1.5rem;
     border: none;
+    margin-top: 1rem;
 }
 .flext_card_title{
     font-size: 2rem;
