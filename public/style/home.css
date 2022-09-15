@@ -51,12 +51,20 @@
     color: white;
     background-color:transparent;
     width: 30%;
+    transition: 0.3s ease-in-out;
 }
 
 .search_home_head_button ion-icon{
     font-size: 1.5rem;
+    transition: 0.3s ease-in-out;
 }
-
+.search_home_head_button:hover{
+    background-color: white;
+    color:black;
+}
+.search_home_head_button:hover ion-icon{
+    color:black;
+}
 .home_second{
     margin-top: 2rem;
     display: flex;
@@ -99,6 +107,20 @@
 .home-card-p{
     font-size: 10px;
 }
+
+.home-head-search-bar-js{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.4rem;
+    background-color: white;
+    padding: .7rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.home-head-search-bar-js:hover{
+color:rgb(0, 0, 0);
+text-decoration: none;
+}
 @media only screen and (max-width:450px) {
     .home_search_text-title{
         font-size: 1rem;
@@ -122,7 +144,7 @@
 
   @media only screen and (min-width:885px) {
     .search_home_head_button{
-      width: 30%;
+      width: 20%;
     }
     
   }

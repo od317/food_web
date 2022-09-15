@@ -2,14 +2,18 @@
     width: 100vw;
     height: 100vh;  
 }
-
+.noneh{
+    height: 4rem;
+    
+}
 .home_head{
    max-width: 100%;
    width: 100vw;
    height: 50vh;
-   background-color: rgb(31, 31, 31) ;
+   background-color: rgb(0, 0, 0) ;
    display: flex;
    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+   
 }
 
 .home_card{
@@ -30,7 +34,7 @@
     border: none;
     color: white;
     padding-top: 1.5rem;
-    background: rgb(0,0,0);
+    background: rgb(0, 0, 0);
     background: linear-gradient(90deg, rgba(0,0,0,0.87718837535014) 100%, rgba(0,0,0,0.8519782913165266) 100%, rgba(0,0,0,0.8267682072829132) 100%);
 }
 

@@ -4,6 +4,10 @@ const s=document.querySelector("#search_form");
 let searchq="";
 const health=`https://api.edamam.com/search?q=chicken&app_id=${app_id}&app_key=${app_key}&to=50&calories=591-722&health=alcohol-free
 `;
+const home_search_button=document.querySelector('.home-head-search-button-js');
+
+
+
 fetchapi(`https://api.edamam.com/search?q=onion&app_id=${app_id}&app_key=${app_key}&to=50`);
 if(s!=null){
 s.addEventListener('submit',(e)=>{
