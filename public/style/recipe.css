@@ -9,15 +9,16 @@
 }
 
 .recipe-search{
- 
   width: 50%;
 
 }
   
 .search-recipe-input{
   border: none;
+  padding-left: .4rem;
   outline: none;
   margin-right: 1rem;
+  color:black;
 }
 .search-recipe-button{
    outline: none;
@@ -45,6 +46,7 @@
 .res_card{
     object-fit: cover;
     background-color: snow;
+    max-width: 200px;
   }
     .temp{
   width: 100%;
@@ -56,6 +58,7 @@
   display:flex;
   align-items: center;
   justify-content: center;
+  color:white;
 }
 
 .btn-search{
@@ -150,6 +153,10 @@
   height: 4.2rem; 
 }
 
+.type{
+  border-radius: 10px;
+  
+}
 
 @media only screen and (min-width: 800px) {
  
@@ -178,4 +185,8 @@
    height: 40px;
   }
 
+}
+
+@media only screen and (max-width:580px) {
+  
 }

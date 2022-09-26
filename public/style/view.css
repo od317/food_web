@@ -24,6 +24,9 @@ max-height: 300px;
     color:var(--color) ;
     display: block;
 }
+.info{
+    
+}
 @media only screen and (min-width: 600px) {
  
     .view_body img{
@@ -37,6 +40,7 @@ max-height: 300px;
     .view_body .info{
         margin-right: 0;
         margin-left:5%;
-        
+        width: 100%;
         }
+  
   }

@@ -26,15 +26,14 @@ async function fetch_api2(view_url){
       <h1 class='view_title'>${e2.recipe.label}</h1>
       <div class="view-flex d-flex align-content-start flex-wrap">
       <img src="${e2.recipe.image}" class="img-thumbnail img-fluid"><br>
-      <div class="info d-flex flex-row ">Chef: ${e2.recipe.source}<br>
+      <div class="info d-flex flex-row">Chef: ${e2.recipe.source}<br>
  Category: ${e2.recipe.ingredients[0].foodCategory}<br><br>
        healthLabels: ${health}<br><br>
        ingredientLines: ${ingredientLines}
        <br><br>
-
-       <div>
        </div>
-       <div class=""></div>
+       </div>
+       
       `;
       return;
       }
