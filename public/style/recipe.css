@@ -23,7 +23,6 @@
 .search-recipe-button{
    outline: none;
    border: none;
-
 }
 .contanier{
     padding: 1rem;
@@ -186,7 +185,11 @@
   }
 
 }
-
+.btn-group{
+  margin: auto;
+}
 @media only screen and (max-width:580px) {
-  
+  .type{
+    font-size: .65rem;
+  }
 }
