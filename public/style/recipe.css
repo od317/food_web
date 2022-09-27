@@ -1,7 +1,10 @@
 .none{
   height: 3rem;
+  background-color: rgb(20, 20, 20);
+
 }
 .search-form{
+  background-color: rgb(20, 20, 20);
   height: 10vh;
   display: flex;
   align-items: center;
@@ -10,10 +13,12 @@
 
 .recipe-search{
   width: 50%;
+  background-color: rgb(20, 20, 20);
 
 }
   
 .search-recipe-input{
+ 
   border: none;
   padding-left: .4rem;
   outline: none;
@@ -21,21 +26,25 @@
   color:black;
 }
 .search-recipe-button{
+  background-color: rgb(20, 20, 20);
    outline: none;
    border: none;
 }
 .contanier{
+  background-color: rgb(20, 20, 20);
     padding: 1rem;
     margin: auto;
     align-items: center;
     
 }
 .serach_input{
+  background-color: rgb(20, 20, 20);
   width: 60%;
   margin-top: 4rem;
   height: 5vh;
 }
 .search_res{
+  background-color: rgb(20, 20, 20);
     display:grid;
     grid-gap:1rem ;
     grid-template: auto / repeat(auto-fit, minmax(140px, 1fr));
@@ -48,10 +57,11 @@
     max-width: 200px;
   }
     .temp{
+  background-color: rgb(20, 20, 20);
   width: 100%;
-  height: 10vh;
+  height: 50vh;
   margin: auto;
-  margin-bottom: 10rem;
+ 
   font-size: 1.6rem;
   text-align: center;
   display:flex;
@@ -83,6 +93,7 @@
 }
 
  .temp ion-icon{
+  background-color: rgb(20, 20, 20);
   color:white;
   margin-left:2rem ;
   -webkit-animation: rotating 2s linear infinite;
@@ -154,7 +165,9 @@
 
 .type{
   border-radius: 10px;
-  
+  border: none;
+  outline: none;
+  margin-left:.5rem;
 }
 
 @media only screen and (min-width: 800px) {
@@ -191,5 +204,6 @@
 @media only screen and (max-width:580px) {
   .type{
     font-size: .65rem;
+    margin-left: .2rem;
   }
 }
