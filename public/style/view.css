@@ -1,5 +1,6 @@
 .view_body{
-    color: rgb(0, 0, 0);
+    background-color:rgb(20, 20, 20);
+    color:white;
     width: 100vw;
     height: 200vh;
     max-height: 1500px;
@@ -13,6 +14,7 @@
     border-radius: 3px;
     width: 50%;
     min-width: 150px;
+    border: none;
 }
 .view_body .info{
 margin-right: 40%;
@@ -23,9 +25,7 @@ max-height: 300px;
     color:var(--color) ;
     display: block;
 }
-.info{
-    
-}
+
 @media only screen and (min-width: 600px) {
  
     .view_body img{

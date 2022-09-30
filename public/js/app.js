@@ -54,8 +54,8 @@ const h_b=document.querySelectorAll(".type");
 h_b.forEach(e=>{
   e.addEventListener('click',()=>{
   console.log(e.innerText);
-  console.log(`https://api.edamam.com/search?q=${searchq}&app_id=${app_id}&app_key=${app_key}&to=50&health=alcohol-free
+  console.log(`https://api.edamam.com/search?q=${searchq}&app_id=${app_id}&app_key=${app_key}&to=50&health=${e.innerText}
   `);
-  fetchapi(`https://api.edamam.com/search?q=${searchq}&app_id=${app_id}&app_key=${app_key}&to=50&health=alcohol-free
+  fetchapi(`https://api.edamam.com/search?q=${searchq}&app_id=${app_id}&app_key=${app_key}&to=50&health=${e.innerText}
   `)
 })});
