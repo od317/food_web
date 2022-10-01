@@ -28,7 +28,7 @@ async function fetchapi(url){
 async function innerh(res){
   if(res.length==0)
   {
-    document.querySelector('.please_wait').innerHTML="No results found";
+    document.querySelector('.please_wait').innerHTML="<div>No results found</div>";
     document.querySelector('.search_res').innerHTML="";
   
   }

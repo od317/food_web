@@ -49,21 +49,23 @@
     border: 1px solid white;
     border-radius:10px ;
     color: white;
-    background-color:transparent;
+    background-color:white;
     width: 30%;
     transition: 0.3s ease-in-out;
 }
 
 .search_home_head_button ion-icon{
     font-size: 1.5rem;
+    color:rgb(20,20,20);
     transition: 0.3s ease-in-out;
 }
 .search_home_head_button:hover{
-    background-color: white;
-    color:black;
+    background-color: var(--theme-color);
+    color:white;
+    border: 1px solid var(--theme-color);
 }
 .search_home_head_button:hover ion-icon{
-    color:black;
+    color:white;
 }
 .home_second{
     margin-top: 2rem;
@@ -110,7 +112,7 @@
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 1.4rem;
-    background-color: white;
+    background-color: var(--theme-color);
     padding: .7rem;
     border-radius: 10px;
     cursor: pointer;
