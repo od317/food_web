@@ -1,29 +1,27 @@
 const app_id="88246266";
 const app_key="5c9709930f9269a830346c8b35d0e3ca";
-const s=document.querySelector("#search_form");
+const s=document.querySelector("#search_form2");
 let searchq="";
-const health=`https://api.edamam.com/search?q=chicken&app_id=${app_id}&app_key=${app_key}&to=50&calories=591-722&health=alcohol-free
-`;
+let Dish='';
+let diet='low-fat';
+let Health='';
+let MealType='';
 const home_search_button=document.querySelector('.home-head-search-button-js');
 
+let url='';
 
-let breakfast = ["breakfast","Bacon","Pancakes","Avocado Toast","Breakfast Sandwich"];
-let dinner = ["dinner","taco","Pasta Napolitana","Chicken Potpie Casserole","Grilled Lemony Chicken and Kale"];
-
-
-//menu(breakfast);
-
-fetchapi(`https://api.edamam.com/search?q=onion&app_id=${app_id}&app_key=${app_key}&to=50&imageSize=LARGE`);
 if(s!=null){
 s.addEventListener('submit',(e)=>{
     e.preventDefault();
     searchq=e.target.querySelector("input").value;
-    const url=`https://api.edamam.com/search?q=${String(searchq)}&app_id=${app_id}&app_key=${app_key}&to=50`;
+    console.log(searchq);
+    url=`https://api.edamam.com/search?q=${String(searchq)}&app_id=${app_id}&app_key=${app_key}&${Health}&${Dish}&${MealType}&${diet}&to=50`;
     fetchapi(url);
 })
 }
 
 async function fetchapi(url){
+  console.log(url);
   document.querySelector('.please_wait').innerHTML=`<div class="temp">Please Wait<ion-icon name="restaurant-outline"></ion-icon></div>`;
    const response=await fetch(url);
    const data=await response.json();
@@ -55,42 +53,8 @@ async function innerh(res){
   }
 }
 
-const h_b=document.querySelectorAll(".type");
-h_b.forEach(e=>{
-  e.addEventListener('click',()=>{
-  console.log(e.innerText);
-  console.log(`https://api.edamam.com/search?q=${searchq}&app_id=${app_id}&app_key=${app_key}&to=50&health=${e.innerText}
-  `);
-  fetchapi(`https://api.edamam.com/search?q=${searchq}&app_id=${app_id}&app_key=${app_key}&to=50&health=${e.innerText}
-  `)
-})});
 
 
-
-async function menu(list){
-  let ht='';
- for(let i=1;i<list.length;i++){ 
-let url = `https://api.edamam.com/search?q=${list[i]}&app_id=${app_id}&app_key=${app_key}&to=1`; 
-    let  response = await fetch(url);
-    let data = await response.json();
-    console.log(data);
-   let res = data.hits;
-   res.forEach(e=>{
-       let title = e.recipe.label;
-       title = title.split(' ');
-       title = title[0].split('-')[0]+" "+title[1].split('-')[0];
-       ht+=`<div class="card menu-card" >
-       <img src="${e.recipe.image}" class="card-img-top" alt="...">
-       <div class="card-body">
-         <h5 class="card-title">${title}</h5>
-         <a href="/recipe/${e.recipe.label}" class="btn btn-primary" id="b">View recipe</a>
-       </div>
-       </div>`; 
-   });
-  }
-  document.getElementById(list[0]).innerHTML=ht;
-  menu(dinner);
-}
 
 
 
@@ -109,3 +73,49 @@ document.addEventListener("click", e => {
     dropdown.classList.remove("active")
   })
 })
+
+
+
+
+
+
+let dish = document.querySelectorAll('.dish');
+
+dish.forEach(e=>{
+  e.addEventListener('click',()=>{
+    Dish="dishType="+e.innerText;
+    console.log(Dish);
+  })
+})
+
+let health = document.querySelectorAll('.Health');
+
+health.forEach(e=>{
+  e.addEventListener('click',()=>{
+    Health="Health="+e.innerText;
+    console.log(Health);
+  })
+})
+
+
+let mealType = document.querySelectorAll('.mealType');
+
+mealType.forEach(e=>{
+  e.addEventListener('click',()=>{
+     MealType="mealType="+e.innerText;
+     console.log(MealType);
+  })
+})
+
+let Diet = document.querySelectorAll('.Diet');
+
+Diet.forEach(e=>{
+  e.addEventListener('click',()=>{
+     diet="Diet="+e.innerText;
+     console.log(diet);
+  })
+})
+
+
+
+//fetchapi(`https://api.edamam.com/search?q=pizza&app_id=${app_id}&app_key=${app_key}&to=50&imageSize=LARGE`);

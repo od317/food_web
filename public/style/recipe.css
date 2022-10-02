@@ -9,7 +9,7 @@
   padding: 1rem;
 }
 
-.recipe-search{
+.recipe-search2{
   width: 50%;
 
 }
@@ -144,7 +144,7 @@
 #b{
   border: none;
   padding: 3px;
-  font-size: 70%;
+  font-size: 1rem;
   margin: auto;
   background-color: var(--theme-color);
 }
@@ -324,6 +324,6 @@
     display: grid;
     grid-template-columns: repeat(2, max-content);
     gap: 1rem;
-    font-size: .7rem;
+    font-size: .9rem;
   }
 }
