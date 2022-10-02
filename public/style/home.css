@@ -93,6 +93,7 @@
     border-radius: 10px;
     min-width: 150px;
     margin-top: 2.5vh;
+    color: white;
 }
 
 .home-card img{
@@ -102,14 +103,16 @@
 
 .home-card-text-d{
     padding: 3%;
-    background-color: rgb(230, 228, 228);
+    height: 26vh;
+    max-height: 100px;
+    background-color: rgb(165, 11, 226);
 }
 .home-card-p{
     font-size: 15px;
 }
 
 .home-head-search-bar-js{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 1.4rem;
     background-color: var(--theme-color);
@@ -121,6 +124,26 @@
 color:rgb(0, 0, 0);
 text-decoration: none;
 }
+
+
+.carousel{
+    width: 60vw;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.carousel-item .new-2{
+    transform: translateX(-90px) translateY(100px);
+    width: 62.7vw;
+    height: 600px;
+    color: none;
+    background:  linear-gradient(90deg, rgba(0,77,111,0.8267682072829132) 0%, rgba(0,0,0,0.6643032212885154) 0%);
+}
+
+.home-card-title{
+    font-size: 1rem;
+}
+
 @media only screen and (max-width:450px) {
     .home_search_text-title{
         font-size: 1rem;
@@ -132,7 +155,7 @@ text-decoration: none;
       width: 70%;
     }
     .home-card p{
-        font-size: 40%;
+        font-size: 50%;
     }
     .home-card h6{
         font-size: 1rem;
@@ -146,5 +169,7 @@ text-decoration: none;
     .search_home_head_button{
       width: 20%;
     }
-    
+    .home-card-text-d{
+        height: 20vh;
+    }
   }

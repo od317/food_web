@@ -12,7 +12,6 @@ let dinner = ["dinner","taco","Pasta Napolitana","Chicken Potpie Casserole","Gri
 
 
 menu(breakfast);
-menu(dinner);
 
 fetchapi(`https://api.edamam.com/search?q=onion&app_id=${app_id}&app_key=${app_key}&to=50&imageSize=LARGE`);
 if(s!=null){
@@ -90,5 +89,8 @@ let url = `https://api.edamam.com/search?q=${list[i]}&app_id=${app_id}&app_key=$
    });
   }
   document.getElementById(list[0]).innerHTML=ht;
+  menu(dinner);
 }
+
+
 
