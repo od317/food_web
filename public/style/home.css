@@ -4,7 +4,7 @@
     min-height: 300px;
     max-height: 400px;
     background-color: white;
-    background:  linear-gradient(90deg, rgba(0,77,111,0.8267682072829132) 0%, rgba(0,0,0,0.6643032212885154) 0%),url('/img/g7.jpg');
+    background:  linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(0,0,0,0.4682247899159664) 0%),url('/img/g7.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -121,8 +121,8 @@
     cursor: pointer;
 }
 .home-head-search-bar-js:hover{
-color:rgb(0, 0, 0);
 text-decoration: none;
+color: white;
 }
 
 
@@ -137,7 +137,7 @@ text-decoration: none;
     width: 62.7vw;
     height: 600px;
     color: none;
-    background:  linear-gradient(90deg, rgba(0,77,111,0.8267682072829132) 0%, rgba(0,0,0,0.6643032212885154) 0%);
+    background:  linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(0,0,0,0.3925945378151261) 0%);
 }
 
 .home-card-title{

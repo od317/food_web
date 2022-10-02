@@ -1,10 +1,8 @@
 .none{
   height: 3rem;
-  background-color: rgb(20, 20, 20);
 
 }
 .search-form{
-  background-color: rgb(20, 20, 20);
   height: 10vh;
   display: flex;
   align-items: center;
@@ -13,38 +11,42 @@
 
 .recipe-search{
   width: 50%;
-  background-color: rgb(20, 20, 20);
 
 }
   
 .search-recipe-input{
- 
+  border-radius: 5px;
   border: none;
   padding-left: .4rem;
   outline: none;
   margin-right: 1rem;
   color:black;
 }
+.filters{
+  padding-left: .4rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  border-radius: 7px;
+  background-color: var(--theme-color);
+  border: none;
+  outline: none;
+}
 .search-recipe-button{
-  background-color: rgb(20, 20, 20);
    outline: none;
    border: none;
 }
 .contanier{
-  background-color: rgb(20, 20, 20);
     padding: 1rem;
     margin: auto;
     align-items: center;
     
 }
 .serach_input{
-  background-color: rgb(20, 20, 20);
   width: 60%;
   margin-top: 4rem;
   height: 5vh;
 }
 .search_res{
-  background-color: rgb(20, 20, 20);
     display:grid;
     grid-gap:1rem ;
     grid-template: auto / repeat(auto-fit, minmax(140px, 1fr));
@@ -58,11 +60,9 @@
     
   }
     .temp{
-  background-color: rgb(20, 20, 20);
   width: 100%;
   height: 50vh;
   margin: auto;
- 
   font-size: 1.6rem;
   text-align: center;
   display:flex;
@@ -94,7 +94,6 @@
 }
 
  .temp ion-icon{
-  background-color: rgb(20, 20, 20);
   color:var(--theme-color);
   margin-left:2rem ;
   -webkit-animation: rotating 2s linear infinite;
@@ -135,21 +134,8 @@
 
 
          
-.btn-grad-s {
-  background-color: #10c3c9;
-  font-size: 1rem;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  color: rgb(255, 255, 255);            
-  border-radius: 10px;
-  margin-left: 2%;
-  margin-bottom: 2%;
 
-}
-.btn-grad-s:hover{
-  background-color: white;
-}
+
 .ff{
   margin-top: 1rem;
   
@@ -167,7 +153,6 @@
   font-size: 80%;
 }
 .please_wait div{
-  background-color:rgb(20,20,20);
   width: 100vw;
   height: 40vh;
   color: white;
@@ -179,7 +164,8 @@
   border: none;
   outline: none;
   margin-left:.5rem;
-  background-color: var(--theme-color);
+  color:black;
+  background-color:rgb(230, 227, 54);
 }
 
 @media only screen and (min-width: 800px) {
@@ -220,13 +206,14 @@
   }
   #b{
     
-    font-size: 80%;
+    font-size: 90%;
   }
            
   .card-title{
-    font-size: 60%;
+    font-size: 90%;
   }
 }
+
 .res_card img{
   max-height: 150px;
 
@@ -251,6 +238,92 @@
   margin-bottom: .4rem;
 }
 
+.rec-body{
+  background:linear-gradient(90deg, rgba(0,77,111,0.8267682072829132) 0%, rgba(0,0,0,0.6643032212885154) 0%),url('/img/background.jpg');
+  background-size: 19.9%;
+ 
+}
 
 
 
+
+
+
+.header-rec {
+  margin-top: .5rem;
+  border-radius: 8px;
+  align-items: baseline;
+  padding: .4rem;
+  background-color: var(--theme-color);
+  margin-left: 1rem;
+  display: inline-block;
+}
+
+.link {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.dropdown.active > .link,
+.link:hover {
+  color: rgb(255, 255, 255);
+}
+
+.dropdown {
+  position: relative;
+  background-color: var(--theme-color);
+}
+
+.dropdown-menu {
+  background-color: var(--theme-color);
+  position: absolute;
+  font-size: .8rem;
+  left: 0;
+  top: calc(100% + .25rem);
+  padding: .75rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 1rem;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.login-form > input {
+  margin-bottom: .5rem;
+}
+
+
+@media only screen and (max-width:750px) {
+  .information-grid {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 1rem;
+    font-size: .7rem;
+  }
+}

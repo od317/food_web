@@ -12,6 +12,7 @@
    margin-top: 2rem;
 }
 .container{
+    color: var(--theme-color);
     margin-top: 1rem;
     margin-left: 1rem;
     padding: 1rem;
@@ -20,7 +21,7 @@
 }
          
 .con{
-    background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC  51%, #02AAB0  100%);
+    background-color: var(--theme-color) ;
     border: none;
     margin: 10px;
     padding: 10px 40px;

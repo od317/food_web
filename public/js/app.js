@@ -11,7 +11,7 @@ let breakfast = ["breakfast","Bacon","Pancakes","Avocado Toast","Breakfast Sandw
 let dinner = ["dinner","taco","Pasta Napolitana","Chicken Potpie Casserole","Grilled Lemony Chicken and Kale"];
 
 
-menu(breakfast);
+//menu(breakfast);
 
 fetchapi(`https://api.edamam.com/search?q=onion&app_id=${app_id}&app_key=${app_key}&to=50&imageSize=LARGE`);
 if(s!=null){
@@ -94,3 +94,18 @@ let url = `https://api.edamam.com/search?q=${list[i]}&app_id=${app_id}&app_key=$
 
 
 
+document.addEventListener("click", e => {
+  const isDropdownButton = e.target.matches("[data-dropdown-button]")
+  if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return
+
+  let currentDropdown
+  if (isDropdownButton) {
+    currentDropdown = e.target.closest("[data-dropdown]")
+    currentDropdown.classList.toggle("active")
+  }
+
+  document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
+    if (dropdown === currentDropdown) return
+    dropdown.classList.remove("active")
+  })
+})
