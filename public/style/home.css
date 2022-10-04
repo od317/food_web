@@ -72,6 +72,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(36, 36, 36);
 }
 .card-text-second{
     color:rgb(0, 0, 0);
@@ -93,7 +94,7 @@
     border-radius: 10px;
     min-width: 150px;
     margin-top: 2.5vh;
-    color: white;
+    color: rgb(240, 227, 227);
 }
 
 .home-card img{
@@ -105,7 +106,7 @@
     padding: 3%;
     height: 26vh;
     max-height: 100px;
-    background-color: rgb(165, 11, 226);
+    background-color: rgb(255, 255, 255);
 }
 .home-card-p{
     font-size: 15px;
@@ -127,14 +128,15 @@ color: white;
 
 
 .carousel{
-    width: 60vw;
+    width: 50vw;
     margin: auto;
     margin-bottom: 3rem;
+    margin-top: 2rem;
 }
 
 .carousel-item .new-2{
-    transform: translateX(-90px) translateY(100px);
-    width: 62.7vw;
+    transform: translateX(-70px) translateY(100px);
+    width: 51.5vw;
     height: 600px;
     color: none;
     background:  linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(0,0,0,0.3925945378151261) 0%);
@@ -142,6 +144,7 @@ color: white;
 
 .home-card-title{
     font-size: 1rem;
+    color: black;
 }
 
 @media only screen and (max-width:450px) {

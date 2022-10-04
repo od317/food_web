@@ -55,9 +55,9 @@
 }
 .res_card{
     object-fit: cover;
-    background-color: snow;
+    background:transparent;
     max-width: 200px;
-    
+    border: none;
   }
     .temp{
   width: 100%;
@@ -150,7 +150,8 @@
 }
          
 .card-title{
-  font-size: 80%;
+    color:white;
+    font-size: 80%;
 }
 .please_wait div{
   width: 100vw;
@@ -239,8 +240,8 @@
 }
 
 .rec-body{
-  background:linear-gradient(90deg, rgba(0,77,111,0.8267682072829132) 0%, rgba(0,0,0,0.6643032212885154) 0%),url('/img/background.jpg');
-  background-size: 19.9%;
+  background:linear-gradient(90deg, rgba(2, 136, 194, 0.827) 0%, rgba(0,0,0,0.6643032212885154) 0%),url('/img/background.jpg');
+  background-size: 30%;
  
 }
 
@@ -294,7 +295,7 @@
   background: none;
   border: none;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(211, 210, 210);
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
