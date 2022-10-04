@@ -100,7 +100,7 @@ let health = document.querySelectorAll('.Health');
 
 health.forEach(e=>{
   e.addEventListener('click',()=>{
-    Health="Health="+e.innerText;
+    Health="health="+e.innerText;
     console.log(Health);
     flitersButtons[1]=[e.innerText,`<button class="${e.innerText}">${e.innerText}<span class="x">x</span></button>`];
     addfliter();

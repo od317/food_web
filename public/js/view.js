@@ -1,6 +1,5 @@
 const app_id2="88246266";
 const app_key2="5c9709930f9269a830346c8b35d0e3ca";
-console.log("shaker");
 const id=document.querySelector('.view_title').textContent;
 console.log(id);
 const view_url=`https://api.edamam.com/search?q=${id}&app_id=${app_id2}&app_key=${app_key2}`;
@@ -9,7 +8,7 @@ async function fetch_api2(view_url){
       const response2=await fetch(view_url);
       const data2= await response2.json();
       const hits=data2.hits;
-      let ht2="";
+      let ht2=``;
       hits.forEach(e2 => {
       if(e2.recipe.label===id){
         let health='';
@@ -22,18 +21,30 @@ async function fetch_api2(view_url){
         })
         health=health.substring(0,health.length-1)+".";
         ingredientLines=ingredientLines.substring(0,ingredientLines.length-1)+".";
-        ht2=`
-      <h1 class='view_title'>${e2.recipe.label}</h1>
-      <div class="view-flex d-flex align-content-start flex-wrap">
-      <img src="${e2.recipe.image}" class="img-thumbnail img-fluid"><br>
-      <div class="info mt-3"> <h4><span class="color">Chef:</span> ${e2.recipe.source}</h4>
-       <h5> <span class="color">Category:</span> ${e2.recipe.ingredients[0].foodCategory} <br><br> </h5>
-       <span class="color"> healthLabels: </span> ${health}<br><br>
-      <span class="color">ingredientLines:</span> ${ingredientLines}
-       <br><br>
-       </div>
-       </div>
-       
+     ht2=`<div class="none"></div>
+    <h3 class="color">${e2.recipe.label}</h3>
+     <div class="d-flex flex-column info-contanier ">
+
+     <div class="d-flex flex-row">
+
+     <img src="${e2.recipe.image}" class="">
+     <div class="row-info max-wi">
+    <div class="color">Chef:</div>${e2.recipe.source}<br>
+    <div class="color">foodCategory:</div>${e2.recipe.ingredients[0].foodCategory} <br><br>
+    <div class="color">health:</div>${health} <br>
+
+     </div>
+
+     </div>
+     <div class="mt-3 max-wi"> <div class="color ">ingredientLines:</div>${ingredientLines} </div><br>
+     <br>
+     <div class="min-wi">
+    <div class="color">Chef:</div>${e2.recipe.source}<br>
+    <div class="color">foodCategory:</div>${e2.recipe.ingredients[0].foodCategory} <br><br>
+    <div class="color">health:</div>${health} <br>
+    <div class="color">ingredientLines:</div>${ingredientLines} <br>
+     </div>
+     </div>
       `;
       return;
       }
