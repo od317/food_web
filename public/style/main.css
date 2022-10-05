@@ -7,8 +7,15 @@
 :root{
     --color:rgb(42, 199, 147);
     --bg:rgb(24, 24, 24);
-    --theme-color:rgb(0, 129, 189);
+    --theme-color:#00aaff;
+    --theme-color2:#09647a;
 
+
+}
+.mainlogo{
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 *{
     font-family:"Nunito";

@@ -26,18 +26,20 @@ body{
 }
 .flext_card_title{
     font-size: 2rem;
+    color: var(--theme-color);
 }
 .flex_home_button{
     background:transparent;
     color: white;
     padding: .6rem;
     border-radius: 10px;
-    border:1px solid whitesmoke;
+    border:1px solid var(--theme-color);
     text-decoration: none;
     transition: 0.2s ease-in-out;
 }
 .flex_home_button:hover{
     color: white;
-    background-color:white;
-    color:black;
+    background-color:var(--theme-color);
+    color:white;
+    border: 1px solid var(--theme-color);
 }

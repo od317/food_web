@@ -55,9 +55,9 @@
 }
 .res_card{
     object-fit: cover;
-    background:transparent;
+    background-color: var(--theme-color2);
     max-width: 200px;
-    border: none;
+    border: none; 
   }
     .temp{
   width: 100%;
