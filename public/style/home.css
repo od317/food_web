@@ -110,8 +110,7 @@
 
 .home-card-text-d{
     padding: 3%;
-    height: 26vh;
-    max-height: 100px;
+     width: 100%;
     background-color: var(--theme-color2);
 }
 .home-card-p{
@@ -156,10 +155,16 @@ color: white;
 }
 .home-card-title{
     font-size: 1rem;
+    display: inline-block;
     color: rgb(255, 255, 255);
-    margin-bottom: .5rem;
+    
 }
 
+.home-card-body{
+   height: 29vh;
+   max-height: 120px;
+   background-color: var(--theme-color2);
+}
 @media only screen and (max-width:450px) {
     .home_search_text-title{
         font-size: 1rem;
@@ -191,3 +196,14 @@ color: white;
   }
 
  
+.homebut{
+    background-color: var(--theme-color);
+    border: none;
+    
+}
+
+.dumb{
+    height: 15vh;
+    max-height:65px;
+    background-color: var(--theme-color2);
+}
