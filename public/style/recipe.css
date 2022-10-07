@@ -241,8 +241,8 @@
 }
 
 .rec-body{
-  background:linear-gradient(90deg, rgba(2, 136, 194, 0.827) 0%, rgba(0,0,0,0.6643032212885154) 0%),url('/img/background.jpg');
-  background-size: 40%;
+  background:linear-gradient(90deg, rgba(2, 136, 194, 0.827) 0%, rgba(0,0,0,0.6643032212885154) 0%),url('/img/background.webp');
+  background-size: 20%;
  
 }
 
@@ -391,4 +391,18 @@
 .prev-but{
   opacity: 0;
   display: inline-block;
+}
+
+.calorie-num2{
+  border-radius: 8px;
+  padding: .3rem;
+}
+.calorie-num{
+  width: 10vw;
+}
+.calorie-num,.calorie-num2{
+  background-color: var(--theme-color);
+  color: white;
+  border: none;
+  outline: none;
 }

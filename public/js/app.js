@@ -9,6 +9,7 @@ let Dish='';
 let diet='';
 let Health='';
 let MealType='';
+let calories='';
 const home_search_button=document.querySelector('.home-head-search-button-js');
 
 let url='';
@@ -19,13 +20,21 @@ let urls=[];
 let pagenum=1;
 
 if(s!=null){
-s.addEventListener('submit',(e)=>{
+  s.addEventListener('submit',(e)=>{
+  console.log('sub');
+  document.querySelector('.prev-but').disabled=true;
+  document.querySelector('.prev-but').style.opacity="0%";
+  urls=[];
     pagenum=1;
     document.querySelector('.page-num').innerText=`${pagenum}`;
     e.preventDefault();
     searchq=e.target.querySelector("input").value;
     console.log(searchq);
-    url=`https://api.edamam.com/api/recipes/v2?type=public&q=${searchq}&app_id=88246266&app_key=5c9709930f9269a830346c8b35d0e3ca&from=0&to=100&${Health}&${Dish}&${MealType}&${diet}`;
+    let c=document.querySelector('.calorie-num').value;
+    if(c!=null && c>10 ){
+      calories=`calories=${c}`;
+    }
+    url=`https://api.edamam.com/api/recipes/v2?type=public&q=${searchq}&app_id=88246266&app_key=5c9709930f9269a830346c8b35d0e3ca&from=0&to=100&${Health}&${Dish}&${MealType}&${diet}&${calories}`;
     fetchapi(url);
 })
 }
@@ -35,6 +44,7 @@ document.querySelector('.prev-but').disabled=true;
 
 
 async function fetchapi(url){
+ 
   document.querySelector('.search_home_head_button').disabled=true;
   document.querySelector('.prev-but').disabled=true;
   document.querySelector('.next-but').disabled=true;
@@ -200,7 +210,7 @@ let Diet = document.querySelectorAll('.Diet');
 
 Diet.forEach(e=>{
   e.addEventListener('click',()=>{
-     diet="Diet="+e.innerText;
+     diet="diet="+e.innerText;
      console.log(diet);
      flitersButtons[3]=[e.innerText,`<button class="${e.innerText}">${e.innerText}<span class="x">x</span></button>`];
      addfliter();
@@ -242,9 +252,9 @@ function addfliter(){
 
 function flitersup(){
   Dish = flitersButtons[0].length ==null ? "": "dishType="+flitersButtons[0][0];
-  Health = flitersButtons[1].length ==null ? "": "Health="+flitersButtons[1][0];
+  Health = flitersButtons[1].length ==null ? "": "health="+flitersButtons[1][0];
   MealType = flitersButtons[2].length ==null ? "": "mealType="+flitersButtons[2][0];
-  diet = flitersButtons[3].length ==null ? "": "Diet="+flitersButtons[3][0];
+  diet = flitersButtons[3].length ==null ? "": "diet="+flitersButtons[3][0];
 }
 
 

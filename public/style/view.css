@@ -1,5 +1,6 @@
 .view_body{
-  background:linear-gradient(90deg, rgba(2, 136, 194, 0.827) 0%, rgba(0,0,0,0.6643032212885154) 0%),url('/img/background.jpg');
+    background:linear-gradient(90deg, rgba(2, 136, 194, 0.827) 0%, rgba(0,0,0,0.6643032212885154) 0%),url('/img/background.webp');
+    background-size: 20%;
     color:white;
     width: 100vw;
     padding-top: 2rem;
