@@ -41,6 +41,7 @@ async function fetch_api2(view_url){
      <div class="min-wi">
     <div class="color">Chef:</div>${e2.recipe.source}<br>
     <div class="color">foodCategory:</div>${e2.recipe.ingredients[0].foodCategory} <br><br>
+    <div class="color">calories:</div>${String(e2.recipe.calories).substring(0,4)}<br>
     <div class="color">health:</div>${health} <br>
     <div class="color">ingredientLines:</div>${ingredientLines} <br>
      </div>

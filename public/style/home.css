@@ -73,7 +73,7 @@
     justify-content: center;
     align-items: center;
     background:url('/img/logo-back.jpg');
-    background-size: cover;
+    background-size: 60%;
     margin-bottom: 4rem;
 }
 .Recommendedrecipes{
@@ -199,8 +199,16 @@ color: white;
 .homebut{
     background-color: var(--theme-color);
     border: none;
-    
+    text-decoration: none;
+    color: white;
+    padding: .3rem;
+    border-radius: 8px;
 }
+.homebut:hover{
+    color:white;
+}
+
+
 
 .dumb{
     height: 15vh;

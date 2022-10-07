@@ -3,6 +3,7 @@
 
 }
 .search-form{
+  margin-top: 1rem;
   height: 10vh;
   display: flex;
   align-items: center;
@@ -241,7 +242,7 @@
 
 .rec-body{
   background:linear-gradient(90deg, rgba(2, 136, 194, 0.827) 0%, rgba(0,0,0,0.6643032212885154) 0%),url('/img/background.jpg');
-  background-size: 30%;
+  background-size: 40%;
  
 }
 
@@ -361,4 +362,26 @@
 }
 .whitelink{
   color:white;
+}
+
+.rec-body .next{
+  width: 100%; 
+  display: none;
+  padding: 1rem;
+}
+.next-but, .prev-but{
+  display: none;
+  background-color: var(--theme-color);
+  color: white;
+  border: none;
+  border-radius:8px ;
+  margin-bottom: 2rem;
+  width: 40%;
+  max-width: 150px;
+  text-align: center;
+  outline: none;
+}
+.prev-but{
+  opacity: 0;
+  display: inline-block;
 }

@@ -3,6 +3,7 @@ const app_key="5c9709930f9269a830346c8b35d0e3ca";
 const s=document.querySelector("#search_form2");
 const searchfor = document.querySelector(".search-for-rec");
 const flitersnum = document.querySelector(".flitersnum");
+let next = '';
 let searchq="";
 let Dish='';
 let diet='';
@@ -12,28 +13,48 @@ const home_search_button=document.querySelector('.home-head-search-button-js');
 
 let url='';
 
+
+let urls=[];
+
+
 if(s!=null){
 s.addEventListener('submit',(e)=>{
     e.preventDefault();
     searchq=e.target.querySelector("input").value;
     console.log(searchq);
-    url=`https://api.edamam.com/search?q=${String(searchq)}&app_id=${app_id}&app_key=${app_key}&${Health}&${Dish}&${MealType}&${diet}&to=50`;
+    url=`https://api.edamam.com/api/recipes/v2?type=public&q=${searchq}&app_id=88246266&app_key=5c9709930f9269a830346c8b35d0e3ca&from=0&to=100&${Health}&${Dish}&${MealType}&${diet}`;
     fetchapi(url);
 })
 }
 
+if(document.querySelector('.prev-but')!=null)
+document.querySelector('.prev-but').disabled=true;
+
+
 async function fetchapi(url){
+  document.querySelector('.search_home_head_button').disabled=true;
   console.log(url);
   document.querySelector('.please_wait').innerHTML=`<div class="temp">Please Wait<ion-icon name="restaurant-outline"></ion-icon></div>`;
   searchfor.innerHTML=""; 
   const response=await fetch(url);
+  try{
+  if(response.ok){
    const data=await response.json();
-   innerh(data.hits);
+   next=data._links.next.href;
+   console.log("next",next);
+   innerh(data.hits);}
+   else{
+    document.querySelector('.search_home_head_button').disabled=false;
+    document.querySelector('.please_wait').innerHTML="<div>No results found</div>";
+   }
+} catch{
+  document.querySelector('.search_home_head_button').disabled=false;
+    document.querySelector('.please_wait').innerHTML="<div>No results found</div>";
 }
-
+}
 async function innerh(res){
   if(res.length==0)
-  {
+  {   document.querySelector('.search_home_head_button').disabled=false;
     document.querySelector('.please_wait').innerHTML="<div>No results found</div>";
     document.querySelector('.search_res').innerHTML="";
   
@@ -50,13 +71,39 @@ async function innerh(res){
       </div>`
     });
     if(document.querySelector('.search_res')!=null){
-      document.querySelector('.please_wait').innerHTML=``;
+      document.querySelector('.please_wait').innerHTML=null;
       document.querySelector('.search_res').innerHTML=ht;
+      document.querySelector('.search-for-rec').style.display="none";
+      document.querySelector('.next').style.display="inline";
+      document.querySelector('.next-but').style.display="inline-block";
+      document.querySelector('.next-but').addEventListener('click',()=>{
+       urls.push(url);
+       console.log(urls);
+       url=next;
+       topFunction();
+       document.querySelector('.prev-but').disabled=false;
+       document.querySelector('.prev-but').style.opacity="100%";
+       document.querySelector('.prev-but').addEventListener('click',()=>{
+        fetchapi(urls[urls.length-1]);
+        delete urls[urls.length-1];
+        console.log(urls);
+       topFunction();
+       })
+       fetchapi(url);
+      })
+      if(urls.length===0){
+        document.querySelector('.prev-but').disabled=true;
+        document.querySelector('.prev-but').style.opacity="0%";
+      }
     }
+    document.querySelector('.search_home_head_button').disabled=false;
+
   }
 }
 
-
+function topFunction() {
+  document.documentElement.scrollTop = 200; // For Chrome, Firefox, IE and Opera
+}
 
 
 

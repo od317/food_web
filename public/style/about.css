@@ -10,10 +10,11 @@
 
 .about-content{
     border: 1px solid white;
-    width: 40%;
-    margin-left: 10%;
-    color: white;
-    padding: .5rem;
+        width: 50%;
+        height: 67%;
+        color: white;
+        margin-left:5% ;
+        padding: .5rem;
 }
 
 
@@ -27,26 +28,20 @@
 .img-cont{
     
     padding-top: 4rem;
+    width: 100vw;
 }
 
 .img-cont .img1{
     width: 150px;
     margin-left: 1rem;
-    margin-right: 1rem;
+    margin-right: .5rem;
     border-radius:10px ;
     
 }
-.img-cont .img2{
-    display: none;
+.about-text{
+    margin-top: 4rem;
+    margin-left: 1rem;
 }
-
-
-.words-cont{
-    padding: 1rem;
-    padding-top: 4rem;
-    color: black;
-}
-
 @media only screen and (min-width:660px) {
     .main{
         background:  linear-gradient(90deg, rgba(0,77,111,0.8267682072829132) 0%, rgba(0,0,0,0.6643032212885154) 0%),url('/img/g9.jpg');
@@ -56,13 +51,15 @@
         height: 100vh;
         max-height: 300px;
     }
-
+    .img-cont .img2{
+        display: none;
+    }
+    
     .about-content{
       margin-top: 2rem ;
     }
     .img-cont {
         width: 300px;
-        margin-left: 5%;
         margin-right: 1rem;
         margin-bottom: 1rem;
     }
@@ -78,11 +75,15 @@
     }
   }
 
-  @media only screen and (max-width:650px) {
-    .about-body{
-        display: grid;
-
+  @media only screen and (max-width:660px) {
+    .about-content{
+        border: 1px solid white;
+        width: 80%;
+        height: 67%;
+        color: white;
+        padding: .5rem;
     }
+    
     .img-cont {
         width: 300px;
         margin-left: 5%;
@@ -94,4 +95,14 @@
         padding-top: .5rem;
         color: black;
     }
+    .img-cont .img1{
+        display: none;
+    }
+    .img-cont .img2{
+        width: 8rem;
+        display: inline-block;
+        border-radius:10px ;
+        
+    }
+    
 }
