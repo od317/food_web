@@ -76,21 +76,7 @@ async function innerh(res){
       document.querySelector('.search-for-rec').style.display="none";
       document.querySelector('.next').style.display="inline";
       document.querySelector('.next-but').style.display="inline-block";
-      document.querySelector('.next-but').addEventListener('click',()=>{
-       urls.push(url);
-       console.log(urls);
-       url=next;
-       topFunction();
-       document.querySelector('.prev-but').disabled=false;
-       document.querySelector('.prev-but').style.opacity="100%";
-       document.querySelector('.prev-but').addEventListener('click',()=>{
-        fetchapi(urls[urls.length-1]);
-        delete urls[urls.length-1];
-        console.log(urls);
-       topFunction();
-       })
-       fetchapi(url);
-      })
+    
       if(urls.length===0){
         document.querySelector('.prev-but').disabled=true;
         document.querySelector('.prev-but').style.opacity="0%";
@@ -100,6 +86,27 @@ async function innerh(res){
 
   }
 }
+
+
+document.querySelector('.next-but').addEventListener('click',()=>{
+  urls.push(url);
+  console.log(urls);
+  url=next;
+  topFunction();
+  document.querySelector('.prev-but').disabled=false;
+  document.querySelector('.prev-but').style.opacity="100%";
+  fetchapi(url);
+ })
+
+
+document.querySelector('.prev-but').addEventListener('click',()=>{
+  fetchapi(urls[urls.length-1]);
+   urls.pop();
+  console.log(urls);
+ topFunction();
+ })
+
+
 
 function topFunction() {
   document.documentElement.scrollTop = 200; // For Chrome, Firefox, IE and Opera
