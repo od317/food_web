@@ -22,6 +22,7 @@ let pagenum=1;
 if(s!=null){
   s.addEventListener('submit',(e)=>{
   console.log('sub');
+  document.querySelector('.recipe-down').style.transform="translateY(0)";
   document.querySelector('.prev-but').disabled=true;
   document.querySelector('.prev-but').style.opacity="0%";
   urls=[];
@@ -136,7 +137,7 @@ document.querySelector('.prev-but').addEventListener('click',()=>{
 
 
 function topFunction() {
-  document.documentElement.scrollTop = 200; // For Chrome, Firefox, IE and Opera
+  document.documentElement.scrollTop = 100; // For Chrome, Firefox, IE and Opera
 }
 
 

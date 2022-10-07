@@ -23,8 +23,8 @@
 .view_body .info-contanier img{
     width: 70%;
     height: 70%;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 250px;
+    max-height: 250px;
     border-radius: 5px;
 }
 
@@ -45,4 +45,9 @@
   .min-wi{
     display: inline-block;
   }
+}
+
+.view-flex-end{
+    width: 30%;
+    text-align: start;
 }

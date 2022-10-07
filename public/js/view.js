@@ -16,7 +16,7 @@ async function fetch_api2(view_url){
         let ingredients='';
         let i =1;
         e2.recipe.healthLabels.forEach(h=>{
-          health+=String(h)+'<br>';
+          health+=String(h)+'';
         })
         e2.recipe.ingredientLines.forEach(h=>{
           ingredientLines+=String(h)+'';
@@ -37,17 +37,17 @@ async function fetch_api2(view_url){
 
      <div class="d-flex justify-content-between mb-3  max-wiflex">
     <label class=""><div class="color">Chef:</div>${e2.recipe.source}</label>
-    <label class=""><div class="color">foodCategory:</div>${e2.recipe.ingredients[0].foodCategory}</label> 
+    <label class="view-flex-end"><div class="color">foodCategory:</div>${e2.recipe.ingredients[0].foodCategory}</label> 
     </div>
 
     <div class="d-flex justify-content-between mb-3 max-wi max-wiflex">
     <label class=""> <div class="color">calories:</div>${String(e2.recipe.calories).substring(0,6)}</label>
-    <label class=""><div class="color">totalWeight:</div>${String(e2.recipe.totalWeight).substring(0,6)}</label> 
+    <label class="view-flex-end"><div class="color">totalWeight:</div>${String(e2.recipe.totalWeight).substring(0,6)}</label> 
     </div>
 
     <div class="d-flex justify-content-between mb-3 max-wi max-wiflex">
     <label class=""> <div class="color">mealType:</div>${String(e2.recipe.mealType)}</label>
-    <label class=""><div class="color">dishType:</div>${String(e2.recipe.dishType)}</label> 
+    <label class="view-flex-end"><div class="color">dishType:</div>${String(e2.recipe.dishType)}</label> 
     </div>
 
     <div class="d-flex justify-content-between mb-3 max-wi max-wiflex">
