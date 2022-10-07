@@ -1,20 +1,23 @@
 .view_body{
   background:linear-gradient(90deg, rgba(2, 136, 194, 0.827) 0%, rgba(0,0,0,0.6643032212885154) 0%),url('/img/background.jpg');
     color:white;
-    padding: 2rem;
     width: 100vw;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
     overflow-x: hidden;
 }
 .view_body .view_title , .view_body h3{
     font-size: 1.4rem;
 }
+.max-wiflex{
+    padding-right: 1.5rem;
+}
 .view_body .color{
     color:var(--theme-color);
 }
 
-.row-info{
-    margin-left: 2rem;
-}
 
 .view_body .info-contanier img{
     width: 70%;
@@ -29,10 +32,16 @@
     .min-wi{
         display: none;
     }
+    .max-wi{
+        display: inline-block;
+    }
 }
 
 @media only screen and (max-width:650px) {
   .max-wi{
     display: none;
+  }
+  .min-wi{
+    display: inline-block;
   }
 }

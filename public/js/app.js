@@ -16,9 +16,12 @@ let url='';
 
 let urls=[];
 
+let pagenum=1;
 
 if(s!=null){
 s.addEventListener('submit',(e)=>{
+    pagenum=1;
+    document.querySelector('.page-num').innerText=`${pagenum}`;
     e.preventDefault();
     searchq=e.target.querySelector("input").value;
     console.log(searchq);
@@ -33,6 +36,8 @@ document.querySelector('.prev-but').disabled=true;
 
 async function fetchapi(url){
   document.querySelector('.search_home_head_button').disabled=true;
+  document.querySelector('.prev-but').disabled=true;
+  document.querySelector('.next-but').disabled=true;
   console.log(url);
   document.querySelector('.please_wait').innerHTML=`<div class="temp">Please Wait<ion-icon name="restaurant-outline"></ion-icon></div>`;
   searchfor.innerHTML=""; 
@@ -45,22 +50,29 @@ async function fetchapi(url){
    innerh(data.hits);}
    else{
     document.querySelector('.search_home_head_button').disabled=false;
+    document.querySelector('.prev-but').disabled=false;
+    document.querySelector('.next-but').disabled=false;
     document.querySelector('.please_wait').innerHTML="<div>No results found</div>";
    }
 } catch{
   document.querySelector('.search_home_head_button').disabled=false;
+  document.querySelector('.prev-but').disabled=false;
+  document.querySelector('.next-but').disabled=false;
     document.querySelector('.please_wait').innerHTML="<div>No results found</div>";
 }
 }
 async function innerh(res){
   if(res.length==0)
   {   document.querySelector('.search_home_head_button').disabled=false;
+  document.querySelector('.prev-but').disabled=false;
+  document.querySelector('.next-but').disabled=false;
     document.querySelector('.please_wait').innerHTML="<div>No results found</div>";
     document.querySelector('.search_res').innerHTML="";
   
   }
   else{
     let ht="";
+    document.querySelector('.page-num').style.display='inline-block';
     res.forEach(e => {
       ht+=` <div class="card res_card" >
       <img src="${e.recipe.image}" class="card-img-top" alt="...">
@@ -83,12 +95,15 @@ async function innerh(res){
       }
     }
     document.querySelector('.search_home_head_button').disabled=false;
-
+    document.querySelector('.prev-but').disabled=false;
+    document.querySelector('.next-but').disabled=false;
   }
 }
 
-
+if(document.querySelector('.next-but')!=null){
 document.querySelector('.next-but').addEventListener('click',()=>{
+  pagenum+=1;
+  document.querySelector('.page-num').innerText=`${pagenum}`;
   urls.push(url);
   console.log(urls);
   url=next;
@@ -97,15 +112,17 @@ document.querySelector('.next-but').addEventListener('click',()=>{
   document.querySelector('.prev-but').style.opacity="100%";
   fetchapi(url);
  })
-
-
+}
+if(document.querySelector('.prev-but')!=null){
 document.querySelector('.prev-but').addEventListener('click',()=>{
+  pagenum-=1;
+  document.querySelector('.page-num').innerText=`${pagenum}`;
   fetchapi(urls[urls.length-1]);
    urls.pop();
   console.log(urls);
  topFunction();
  })
-
+}
 
 
 function topFunction() {

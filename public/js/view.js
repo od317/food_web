@@ -13,11 +13,18 @@ async function fetch_api2(view_url){
       if(e2.recipe.label===id){
         let health='';
         let ingredientLines='';
+        let ingredients='';
+        let i =1;
         e2.recipe.healthLabels.forEach(h=>{
-          health+=String(h)+',';
+          health+=String(h)+'<br>';
         })
         e2.recipe.ingredientLines.forEach(h=>{
-          ingredientLines+=String(h)+',';
+          ingredientLines+=String(h)+'';
+         
+        })
+        e2.recipe.ingredients.forEach(h=>{
+          ingredients+=String(h.text)+'<br>';
+         
         })
         health=health.substring(0,health.length-1)+".";
         ingredientLines=ingredientLines.substring(0,ingredientLines.length-1)+".";
@@ -26,26 +33,62 @@ async function fetch_api2(view_url){
      <div class="d-flex flex-column info-contanier ">
 
      <div class="d-flex flex-row">
-
-     <img src="${e2.recipe.image}" class="">
      <div class="row-info max-wi">
-    <div class="color">Chef:</div>${e2.recipe.source}<br>
-    <div class="color">foodCategory:</div>${e2.recipe.ingredients[0].foodCategory} <br><br>
-    <div class="color">health:</div>${health} <br>
 
-     </div>
+     <div class="d-flex justify-content-between mb-3  max-wiflex">
+    <label class=""><div class="color">Chef:</div>${e2.recipe.source}</label>
+    <label class=""><div class="color">foodCategory:</div>${e2.recipe.ingredients[0].foodCategory}</label> 
+    </div>
 
+    <div class="d-flex justify-content-between mb-3 max-wi max-wiflex">
+    <label class=""> <div class="color">calories:</div>${String(e2.recipe.calories).substring(0,6)}</label>
+    <label class=""><div class="color">totalWeight:</div>${String(e2.recipe.totalWeight).substring(0,6)}</label> 
+    </div>
+
+    <div class="d-flex justify-content-between mb-3 max-wi max-wiflex">
+    <label class=""> <div class="color">mealType:</div>${String(e2.recipe.mealType)}</label>
+    <label class=""><div class="color">dishType:</div>${String(e2.recipe.dishType)}</label> 
+    </div>
+
+    <div class="d-flex justify-content-between mb-3 max-wi max-wiflex">
+    <label class=""> <div class="color">FAT:</div>${String(e2.recipe.totalNutrients.FAT.quantity).substring(0,6)}</label>
+    </div>
+    <br><br>
+
+     <div class="mt-3 max-wi in-max"> <div class="color ">ingredients:</div>${ingredientLines} </div><br>
+     <br><br>
      </div>
-     <div class="mt-3 max-wi"> <div class="color ">ingredientLines:</div>${ingredientLines} </div><br>
+     <img src="${e2.recipe.image}" class="">
+     </div>
+     <div class="max-wi"><div class="color">health:</div>${health}</div> <br>
+     </div>
      <br>
-     <div class="min-wi">
-    <div class="color">Chef:</div>${e2.recipe.source}<br>
-    <div class="color">foodCategory:</div>${e2.recipe.ingredients[0].foodCategory} <br><br>
-    <div class="color">calories:</div>${String(e2.recipe.calories).substring(0,4)}<br>
-    <div class="color">health:</div>${health} <br>
-    <div class="color">ingredientLines:</div>${ingredientLines} <br>
+    <div class="min-wi">
+     <div class="d-flex justify-content-between mb-3 min-wi max-wiflex">
+     <label class=""><div class="color">Chef:</div>${e2.recipe.source}</label>
+     <label class=""><div class="color">foodCategory:</div>${e2.recipe.ingredients[0].foodCategory}</label> 
      </div>
-     </div>
+ 
+     <div class="d-flex justify-content-between mb-3 min-wi max-wiflex">
+    <label class=""> <div class="color">calories:</div>${String(e2.recipe.calories).substring(0,6)}</label>
+    <label class=""><div class="color">totalWeight:</div>${String(e2.recipe.totalWeight).substring(0,6)}</label> 
+    </div>
+
+    <div class="d-flex justify-content-between mb-3 min-wi max-wiflex">
+    <label class=""> <div class="color">mealType:</div>${String(e2.recipe.mealType)}</label>
+    <label class=""><div class="color">dishType:</div>${String(e2.recipe.dishType)}</label> 
+    </div>
+
+    <div class="d-flex justify-content-between mb-3 min-wi max-wiflex">
+    <label class=""> <div class="color">FAT:</div>${String(e2.recipe.totalNutrients.FAT.quantity).substring(0,6)}</label>
+    </div>
+
+    <div class="mt-3 min-wi in-max"> <div class="color ">ingredients:</div>${ingredientLines} </div><br>
+    <br><br>
+    <div class="min-wi"><div class="color">health:</div>${health}</div> <br>
+    
+    </div>
+     <br>
       `;
       return;
       }
