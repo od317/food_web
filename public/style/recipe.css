@@ -399,10 +399,31 @@
 }
 .calorie-num{
   width: 10vw;
+  min-width: 70px;
 }
 .calorie-num,.calorie-num2{
   background-color: var(--theme-color);
   color: white;
   border: none;
   outline: none;
+}
+
+
+.flex-card-cont{
+ margin-top: 4rem;
+}
+.recipe-flex-cards{
+  margin-top:2rem;
+}
+.flex-card{
+  max-width: 45%;
+  margin-top: .5rem;
+}
+
+
+@media only screen and (min-width:690px) {
+  .flex-card{
+    max-width: 20%;
+    margin-top: .5rem;
+  }
 }
