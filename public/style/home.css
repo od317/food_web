@@ -216,3 +216,9 @@ color: white;
     max-height:65px;
     background-color: var(--theme-color2);
 }
+
+
+
+.home-sec-desc{
+    color: white;
+}

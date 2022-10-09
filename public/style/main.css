@@ -11,13 +11,20 @@
     --theme-color2:#09647a;
     font-size: 18px;
 
+
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mainlogo{
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
-    margin-left: .7rem;
+   
 }
 *{
     font-family:"Nunito";
@@ -37,15 +44,11 @@ body{
     padding: 1rem;
     background:transparent;
 }
-#nav_list{
-    align-items: center;
-    justify-content: center;
+.navo{
     width: 100vw;
 }
-
 #nav_list a{
       text-decoration: none;
-      margin-left: 8%;
       color: rgb(255, 255, 255);
 }
 ion-icon{
@@ -61,10 +64,7 @@ ion-icon{
 .in{
     max-width: 100%;
 }
-.logof{
- margin-top: 3rem;
 
-}
 .logof ion-icon{
   font-size: 300%;
 }
