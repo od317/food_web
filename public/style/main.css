@@ -86,7 +86,34 @@ ion-icon{
     height: 10vh;
 }
 
+.flex-item{
+   text-decoration: none;
+}
+.flex-item:hover{
+    color: var(--theme-color);
+}
 
+.upper{
+    padding-top: 9rem;
+    padding-bottom: 5rem;
+    background-color: var(--theme-color2);
+    width: 100vw;
+    text-align: center;
+    color:white;
+    background: url('/img/404.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.back-home{
+    color: white;
+    text-decoration: none;
+    background-color: var(--theme-color);
+    padding: .5rem;
+    border-radius: 5px;
+}
+.back-home:hover{
+    color: white;
+}
 @media only screen and (max-width:450px) {
     .nav_bar_e{
         width: 30vw;
