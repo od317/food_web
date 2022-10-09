@@ -433,7 +433,21 @@
     margin-top: 0;
   }
 }
+@media only screen and (max-width:690px) {
+  .flex-card{
+    width: 40%;
+  }
+}
 .recipe-down{
   transform: translateY(-120px);
   padding-bottom: 3rem;
+}
+
+
+.recipe-not{
+  color:var(--theme-color);
+  text-align: center;
+  margin-bottom:50vh;
+  font-size: 2rem;
+  margin-top: 5rem;
 }

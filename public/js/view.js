@@ -6,8 +6,15 @@ const view_url=`https://api.edamam.com/search?q=${id}&app_id=${app_id2}&app_key=
 fetch_api2(view_url);
 async function fetch_api2(view_url){
       const response2=await fetch(view_url);
+      console.log(view_url);
       const data2= await response2.json();
       const hits=data2.hits;
+      if(hits.length===0){
+      document.querySelector('.view_body').innerHTML=`<div class="none"></div>
+      <div class="recipe-not">Recipe not found</div>`;
+       
+      }
+      else{
       let ht2=``;
       hits.forEach(e2 => {
       if(e2.recipe.label===id){
@@ -93,5 +100,5 @@ async function fetch_api2(view_url){
       return;
       }
       });
-      document.querySelector('.view_body').innerHTML=ht2;
+      document.querySelector('.view_body').innerHTML=ht2;}
 }

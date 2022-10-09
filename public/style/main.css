@@ -17,6 +17,7 @@
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
+    margin-left: .7rem;
 }
 *{
     font-family:"Nunito";
@@ -32,15 +33,14 @@ body{
 }
 .navbar{
     position:absolute;
-    width: 100%;
+    width: 100vw;
     padding: 1rem;
     background:transparent;
 }
 #nav_list{
     align-items: center;
     justify-content: center;
-    margin: auto;
-    width: 100%;
+    width: 100vw;
 }
 
 #nav_list a{
@@ -63,6 +63,7 @@ ion-icon{
 }
 .logof{
  margin-top: 3rem;
+
 }
 .logof ion-icon{
   font-size: 300%;
