@@ -8,7 +8,7 @@ body{
     background-repeat: no-repeat;
     width: 100vw;
     height: 150vh;
-    
+    max-height: 1000px;
    }
 .home_container{
     width: 100vw;
