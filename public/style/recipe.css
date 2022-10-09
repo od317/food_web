@@ -52,7 +52,7 @@
     grid-gap:1rem ;
     grid-template: auto / repeat(auto-fit, minmax(140px, 1fr));
     padding: 1rem;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 
 }
 .res_card{
@@ -422,8 +422,8 @@
  margin-top: 1rem;
 }
 .flex-card{
-  max-width: 45%;
   margin-top: .5rem;
+  width: 20%;
 }
 
 
