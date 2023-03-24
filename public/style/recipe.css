@@ -2,6 +2,11 @@
   height: 3rem;
 
 }
+
+.res_card{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 .search-form{
   margin-top: 1rem;
   height: 10vh;
@@ -21,7 +26,8 @@
   padding-left: .4rem;
   outline: none;
   margin-right: 1rem;
-  color:black;
+  color:white;
+  background-color: var(--theme-color2);
 }
 .filters{
   padding-left: .4rem;
@@ -35,6 +41,19 @@
 .search-recipe-button{
    outline: none;
    border: none;
+}
+.search_home_head_button{
+  background-color: var(--theme-color2);
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 10%;
+  justify-content: center;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+.search_home_head_button ion-icon{
+  color:white;
 }
 .contanier{
     padding: 1rem;
@@ -158,10 +177,11 @@
 .please_wait div{
   width: 100vw;
   height: 40vh;
-  color: white;
+  color:var(--theme-color2);
   padding-top: 2rem;
   text-align: center;
 }
+
 .type{
   border-radius: 10px;
   border: none;
@@ -244,16 +264,26 @@
 }
 
 .rec-body{
-  background:linear-gradient(90deg, rgba(2, 136, 194, 0.827) 0%, rgba(0,0,0,0.6643032212885154) 0%),url('/img/background.webp');
   background-size: 20%;
  
 }
 
 
+.flex-card-label:first-child{
+  margin-top:5%;
+}
+
+.sab{
+  background-color: var(--theme-color);
+  color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
 
 .search-for-rec{
   color: white;
   margin: auto;
+  margin-bottom:5%;
   text-align: center;
   font-size: 2.5rem;
   max-height: 300px;
@@ -315,6 +345,9 @@
   margin-bottom: 0%;
   font-size: .7rem;
 }
+
+
+
 .dropdown.active > .link,
 .link:hover {
   color: rgb(255, 255, 255);

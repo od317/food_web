@@ -26,7 +26,7 @@ app.use('/contact',contactrouter);
 app.use('/about',aboutrouter);
 app.use('/home',homerouter);
 app.get('^/$',(req,res)=>{
-    res.render("index");
+    res.render("home");
 })
 
 app.get('*',(req,res)=>{

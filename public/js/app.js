@@ -260,3 +260,21 @@ function flitersup(){
 
 
 //fetchapi(`https://api.edamam.com/search?q=pizza&app_id=${app_id}&app_key=${app_key}&to=50&imageSize=LARGE`);
+
+
+const see_all_buts = document.querySelectorAll('.see_all_but');
+
+let see_all = (searchqq)=>{
+    url=`https://api.edamam.com/api/recipes/v2?type=public&q=${searchqq}&app_id=88246266&app_key=5c9709930f9269a830346c8b35d0e3ca&from=0&to=100&${Health}&${Dish}&${MealType}&${diet}&${calories}`;
+    fetchapi(url);
+}
+
+
+see_all_buts.forEach(b=>{
+  b.addEventListener('click',()=>{
+  console.log(b.innerText.split(' ')[1]);
+  see_all(b.innerText.split(' ')[1]);
+window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  })
+})

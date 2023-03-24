@@ -3,35 +3,62 @@
     height: 80vh;
     min-height: 300px;
     max-height: 400px;
-    background-color: white;
-    background:  linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(0,0,0,0.4682247899159664) 0%),url('/img/g7.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display:flex ;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     
  }
 
 .home_search_head_text{
-    width: 80%;
-    background-color: transparent;
     border: none;
-    color:white;
+    color:var(--theme-color2);
     font-size: 1.3rem;
 }
+
+.fisrt_head{
+    background-color:transparent;
+    width: 50%;
+    margin-top: 2rem;
+    padding-left: 15%;
+}
+
+.card-body {
+    background-color:#DAE2B6;
+}
+
+.sec_head{
+    width: 50%;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
+
+.sec_head .sec_img{
+    width: 30%;
+    margin-top: 2rem;
+    height: 16rem;
+    background: url('https://img.freepik.com/premium-photo/ready-eat-black-spaghetti-with-mussels-tomatoes-basil-plate-black-background-food-photography-dark-colors-top-vertical-view_107288-4107.jpg?w=2000');
+    background-position:center;
+    background-size: cover;
+    border-radius: 45%;
+    background-repeat: no-repeat;
+}
+
 .home_search_text-title{
     text-decoration: none;
-    color:white;
-    font-size: 1rem;
+    color:var(--theme-color2);
+    font-size: 2rem;
 }
 .card-text{
     font-size: 1rem;
 }
 .home_search_text-title:hover{
     text-decoration: none;
-    color:white;
+    color:var(--theme-color2);
 }
 
 .search_input_home_header{
@@ -72,11 +99,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background:url('/img/logo-back.jpg');
     background-size: 60%;
 }
 .Recommendedrecipes{
-  color:white;
+  color:var(--theme-color2);
   font-size:1.4rem ;
 }
 .card-text-second{
@@ -185,6 +211,7 @@ color: white;
     .home_search_head_text{
         width: 100%;
     }
+    
   }
 
   @media only screen and (min-width:885px) {
@@ -221,4 +248,137 @@ color: white;
 
 .home-sec-desc{
     color: white;
+}
+
+@media only screen and (max-width:660px){
+    .home_head_search{
+        width: 100%;
+        height: 80vh;
+        min-height: 300px;
+        max-height: 400px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display:flex ;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+     }
+    
+    .home_search_head_text{
+        border: none;
+        color:var(--theme-color2);
+        font-size: 1rem;
+    }
+    
+    .fisrt_head{
+        background-color:transparent;
+        width: 50%;
+        margin-top: 1.5rem;
+        padding-left:0%;
+    }
+    
+    .card-body {
+        background-color:#DAE2B6;
+    }
+    
+    .sec_head{
+        width: 50%;
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .sec_head .sec_img{
+        width: 30%;
+        margin-top: 2rem;
+        height: 16rem;
+        background: url('https://img.freepik.com/premium-photo/ready-eat-black-spaghetti-with-mussels-tomatoes-basil-plate-black-background-food-photography-dark-colors-top-vertical-view_107288-4107.jpg?w=2000');
+        background-position:center;
+        background-size: cover;
+        border-radius: 45%;
+        background-repeat: no-repeat;
+    }
+    
+    .home_search_text-title{
+        text-decoration: none;
+        color:var(--theme-color2);
+        font-size: 2rem;
+    }
+    .home-head-search-bar-js{
+        margin-left: 10%;
+        font-size: .8rem;
+        padding:.32rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+}
+
+
+
+
+@media only screen and (max-width:450px){
+    .home_head_search{
+        padding-top: 80%;
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 80%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display:flex ;
+        flex-direction:column-reverse;
+        align-items: center;
+        justify-content: center;
+        
+     }
+    
+    .home_search_head_text{
+        border: none;
+        color:var(--theme-color2);
+        font-size: 1rem;
+    }
+    
+    .fisrt_head{
+        background-color:transparent;
+        width: 100%;
+        margin-top: 1.5rem;
+        padding-left:0%;
+    }
+    
+    .card-body {
+        background-color:#DAE2B6;
+    }
+    
+    .sec_head{
+        width: 100%;
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .sec_head .sec_img{
+        width: 90%;
+        margin-top: 2rem;
+        height: 16rem;
+        background: url('https://img.freepik.com/premium-photo/ready-eat-black-spaghetti-with-mussels-tomatoes-basil-plate-black-background-food-photography-dark-colors-top-vertical-view_107288-4107.jpg?w=2000');
+        background-position:center;
+        background-size: cover;
+        border-radius: 45%;
+        background-repeat: no-repeat;
+    }
+    
+    .home_search_text-title{
+        text-decoration: none;
+        color:var(--theme-color2);
+        font-size: 2rem;
+    }
+    .home-head-search-bar-js{
+        margin-left: 10%;
+        font-size: .8rem;
+        padding:.32rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
 }

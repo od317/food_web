@@ -1,19 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
 @import 'home.css';
 @import 'recipe.css';
 @import 'about.css';
 @import 'contact.css';
 @import 'view.css';
+
 :root{
     --color:rgb(42, 199, 147);
     --bg:rgb(24, 24, 24);
-    --theme-color:#00aaff;
-    --theme-color2:#09647a;
+    --theme-color:#7BC74D;
+    --theme-color2:#222831;
     font-size: 18px;
 
 
 }
+.sab{
+    margin-top: 1rem;
+    border: none;
+    margin-left: 4%;
 
+}
 #logo{
     display: flex;
     align-items: center;
@@ -32,6 +41,7 @@
 body{
  
  background-size: 50%;
+ background-color:#DAE2B6;
  overflow-x:hidden ;
 }
 .nav_bar_e{
@@ -49,10 +59,10 @@ body{
 }
 .navo a{
     text-decoration: none;
-    color: white;
+    color:var(--theme-color);
 }
 .navo a:hover{
-    color: white;
+    color:var(--theme-color);
 }
 #nav_list a{
       text-decoration: none;
@@ -130,4 +140,10 @@ ion-icon{
     .logof ion-icon{
         font-size:1.7rem;
       }
+      
+    .sab{
+        margin-left: 8%;
+    }
   }
+
+
